@@ -49,7 +49,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    min-height: 84.5vh;
+    min-height: 100vh;
 }
 
 .main .titulo {
