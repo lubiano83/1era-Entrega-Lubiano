@@ -25,8 +25,16 @@ function ingreseComision() {
         alert ("Felicitaciones, terminaste top10!!");
     }
 
-    else if (CURSOS[numeroComision].claseIniciada || CURSOS[numeroComision].cantidadAlumnos === 150) {
-        alert ("El curso ya inicio o alcanzo el maximo de alumnos");
+    else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos === 150) {
+        alert ("El curso ya inicio y a maxima capacidad");
+    }
+
+    else if (CURSOS[numeroComision].cantidadAlumnos === 150 && CURSOS[numeroComision].claseIniciada == false) {
+        alert ("El curso alcanzo el maximo de alumnos");
+    }
+
+    else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos < 150) {
+        alert ("El curso ya inicio");
     
     } else {
         alert ("El curso aun no comienza");
