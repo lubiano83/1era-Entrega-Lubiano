@@ -14,7 +14,7 @@ function ingreseComision() {
     let numeroComision = parseInt(prompt("Ingrese número de comisión sin el #"));
 
     while (!(numeroComision in CURSOS)) {
-        numeroComision = parseInt(prompt("Número de comisión no disponible. Ingrese otro número:"));
+        numeroComision = parseInt(prompt("No estas registrado en ese curso. Ingresa otro número:"));
     }
 
     if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10 == false) {
