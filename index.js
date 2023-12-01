@@ -1,6 +1,6 @@
 /* 1era Entrega */
 
-const cursos = {
+const CURSOS = {
     46915: { cantidadAlumnos: 150, claseIniciada: true },
     49810: { cantidadAlumnos: 86, claseIniciada: true },
     49575: { cantidadAlumnos: 94, claseIniciada: true },
@@ -13,11 +13,11 @@ const cursos = {
 function ingreseComision() {
     let numeroComision = parseInt(prompt("Ingrese número de comisión sin el #"));
 
-    while (!(numeroComision in cursos)) {
+    while (!(numeroComision in CURSOS)) {
         numeroComision = parseInt(prompt("Número de comisión no disponible. Ingrese otro número:"));
     }
 
-    if (cursos[numeroComision].claseIniciada || cursos[numeroComision].cantidadAlumnos === 150) {
+    if (CURSOS[numeroComision].claseIniciada || CURSOS[numeroComision].cantidadAlumnos === 150) {
         alert ("El curso ya inicio o alcanzo el maximo de alumnos");
     
     } else {
