@@ -3,6 +3,7 @@
 const CURSOS = {
     46915: { cantidadAlumnos: 150, claseIniciada: true, claseFinalizado: true, top10: true },
     49810: { cantidadAlumnos: 86, claseIniciada: true, claseFinalizado: false, top10: false },
+    61560: { cantidadAlumnos: 86, claseIniciada: true, claseFinalizado: false, top10: false },
     49575: { cantidadAlumnos: 94, claseIniciada: true, claseFinalizado: false, top10: false },
     53210: { cantidadAlumnos: 57, claseIniciada: false, claseFinalizado: false, top10: false },
     54060: { cantidadAlumnos: 42, claseIniciada: false, claseFinalizado: false, top10: false },
