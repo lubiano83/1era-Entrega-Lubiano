@@ -12,6 +12,7 @@ const CURSOS = {
 };
 
 function ingreseComision() {
+    
     let numeroComision = parseInt(prompt("Ingrese número de comisión sin el #"));
 
     while (!(numeroComision in CURSOS)) {
@@ -40,6 +41,7 @@ function ingreseComision() {
     } else {
         alert ("El curso aun no comienza");
     }
+
 } ingreseComision();
 
 
