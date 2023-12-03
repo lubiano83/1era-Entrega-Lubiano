@@ -9,6 +9,7 @@ const CURSOS = {
     54060: { cantidadAlumnos: 42, claseIniciada: false, claseFinalizado: false, top10: false },
     57245: { cantidadAlumnos: 21, claseIniciada: false, claseFinalizado: false, top10: false },
     57120: { cantidadAlumnos: 36, claseIniciada: false, claseFinalizado: false, top10: false },
+    59520: { cantidadAlumnos: 36, claseIniciada: false, claseFinalizado: false, top10: false },
 };
 
 function ingreseComision() {

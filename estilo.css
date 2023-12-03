@@ -9,7 +9,7 @@
 /* Body */
 
 .body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: white;
 }
 
@@ -80,7 +80,7 @@
 
 .main .main__contenedor .contenedor__clases .clases {
     font-size: 36px;
-    margin: 20px 0px 20px 0px;
+    margin: 20px;
     text-decoration: underline;
     font-style: italic;
 }
