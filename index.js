@@ -14,7 +14,7 @@ const CURSOS = {
 
 function ingreseComision() {
     
-    let respuesta = prompt("Quieres ingresar un numero de comision existente? (si/no)").toLowerCase();
+    let respuesta = prompt("¿Quieres ingresar un numero de comision existente? (si/no)").toLowerCase();
 
     if (respuesta === "si") {
 
