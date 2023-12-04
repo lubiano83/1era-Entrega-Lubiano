@@ -20,13 +20,14 @@ function ingreseComision() {
         let numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
         while (!(numeroComision in CURSOS)) {
             numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
+            numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
             return;
         }
         if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10 == false) {
             alert ("Felicitaciones, Curso Terminado!!");
         }
         else if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10) {
-            alert ("Felicitaciones, terminaste top10!!");
+            alert ("Felicitaciones, Terminaste Top10!!");
         }
         else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos === 150) {
             alert ("El curso ya inicio y a maxima capacidad");
