@@ -9,47 +9,44 @@ const CURSOS = {
     54060: { cantidadAlumnos: 42, claseIniciada: false, claseFinalizado: false, top10: false },
     57245: { cantidadAlumnos: 21, claseIniciada: false, claseFinalizado: false, top10: false },
     57120: { cantidadAlumnos: 36, claseIniciada: false, claseFinalizado: false, top10: false },
-    59520: { cantidadAlumnos: 36, claseIniciada: false, claseFinalizado: false, top10: false },
+    59520: { cantidadAlumnos: 43, claseIniciada: false, claseFinalizado: false, top10: false },
 };
 
 function ingreseComision() {
     
-    let numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
+    let respuesta = prompt("Quieres ingresar un numero de comision? (si/no)").toLowerCase();
 
-    while (!(numeroComision in CURSOS)) {
-        let respuesta = prompt("Quieres ingresar otro numero de comision? (si/no)").toLowerCase();
-        if (respuesta === "si") {
+    if (respuesta === "si") {
+        let numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
+        while (!(numeroComision in CURSOS)) {
             numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
-        }
-        else if (respuesta === "no") {
             return;
         }
+        if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10 == false) {
+            alert ("Felicitaciones, Curso Terminado!!");
+        }
+        else if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10) {
+            alert ("Felicitaciones, terminaste top10!!");
+        }
+        else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos === 150) {
+            alert ("El curso ya inicio y a maxima capacidad");
+        }
+        else if (CURSOS[numeroComision].cantidadAlumnos === 150 && CURSOS[numeroComision].claseIniciada == false) {
+            alert ("El curso alcanzo el maximo de alumnos");
+        }
+        else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos < 150) {
+            alert ("El curso ya inicio");
+        
+        } 
         else {
-            alert ("por favor, ingresa si o no");
+            alert ("El curso aun no comienza");
         }
     }
-
-    if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10 == false) {
-        alert ("Felicitaciones, Curso Terminado!!");
+    else if (respuesta === "no") {
+        return;
     }
-
-    else if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10) {
-        alert ("Felicitaciones, terminaste top10!!");
-    }
-
-    else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos === 150) {
-        alert ("El curso ya inicio y a maxima capacidad");
-    }
-
-    else if (CURSOS[numeroComision].cantidadAlumnos === 150 && CURSOS[numeroComision].claseIniciada == false) {
-        alert ("El curso alcanzo el maximo de alumnos");
-    }
-
-    else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos < 150) {
-        alert ("El curso ya inicio");
-    
-    } else {
-        alert ("El curso aun no comienza");
+    else {
+        alert ("por favor, ingresa si o no");
     }
 
 } ingreseComision();
