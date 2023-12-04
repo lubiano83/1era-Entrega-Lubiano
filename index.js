@@ -14,14 +14,15 @@ const CURSOS = {
 
 function ingreseComision() {
     
-    let respuesta = prompt("Quieres ingresar un numero de comision? (si/no)").toLowerCase();
+    let respuesta = prompt("Quieres ingresar un numero de comision existente? (si/no)").toLowerCase();
 
     if (respuesta === "si") {
+
         let numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
+
         while (!(numeroComision in CURSOS)) {
-            numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
-            numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
-            return;
+            alert ("Ese numero de Comision no existe");
+            return ingreseComision ();
         }
         if (CURSOS[numeroComision].claseFinalizado && CURSOS[numeroComision].top10 == false) {
             alert ("Felicitaciones, Curso Terminado!!");
@@ -47,7 +48,10 @@ function ingreseComision() {
         return;
     }
     else {
-        alert ("por favor, ingresa si o no");
+        while (respuesta !== "no" || respuesta !== "si") {
+            alert ("por favor, ingresa si o no");
+            return ingreseComision ();
+        }
     }
 
 } ingreseComision();
