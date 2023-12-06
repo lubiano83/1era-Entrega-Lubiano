@@ -9,19 +9,19 @@ const CURSOS = {
     54060: { cantidadAlumnos: 42, claseIniciada: false, claseFinalizada: false, top10: false },
     57245: { cantidadAlumnos: 21, claseIniciada: false, claseFinalizada: false, top10: false },
     57120: { cantidadAlumnos: 36, claseIniciada: false, claseFinalizada: false, top10: false },
-    59520: { cantidadAlumnos: 43, claseIniciada: false, claseFinalizada: false, top10: false },
+    59520: { cantidadAlumnos: 43, claseIniciada: false, claseFinalizada: false, top10: false }
 };
 
 function ingreseComision() {
 
-    let respuesta = prompt("¿Quieres ingresar un numero de comision existente? (si/no)").toLowerCase();
+    let respuesta = prompt("¿Quieres ingresar un numero de comision? (si/no)").toLowerCase();
 
     if (respuesta === "si") {
 
-        let numeroComision = parseInt(prompt("Ingrese número de comisión de tu curso sin el #"));
+        let numeroComision = parseInt(prompt("Ingrese el número de comisión de tu curso sin el #"));
 
         while (!(numeroComision in CURSOS)) {
-            alert("Ese numero de Comision no existe");
+            alert("Este numero de comision no existe");
             return ingreseComision();
         }
         if (CURSOS[numeroComision].claseFinalizada && CURSOS[numeroComision].top10 === false) {
@@ -31,16 +31,16 @@ function ingreseComision() {
             alert("Felicitaciones, Terminaste Top10!!");
         }
         else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos === 150) {
-            alert("El curso ya inicio y a maxima capacidad");
+            alert("Este curso ya inicio y a maxima capacidad");
         }
         else if (CURSOS[numeroComision].cantidadAlumnos === 150 && CURSOS[numeroComision].claseIniciada === false) {
-            alert("El curso alcanzo el maximo de alumnos");
+            alert("Este curso alcanzo el maximo de alumnos");
         }
         else if (CURSOS[numeroComision].claseIniciada && CURSOS[numeroComision].cantidadAlumnos < 150) {
-            alert("El curso ya inicio");
+            alert("Este curso ya inicio");
         }
         else {
-            alert("El curso aun no comienza");
+            alert("Este curso aun no comienza");
         }
     }
     else if (respuesta === "no") {
@@ -52,7 +52,7 @@ function ingreseComision() {
             return ingreseComision();
         }
     }
-    
+
 } ingreseComision();
 
 
